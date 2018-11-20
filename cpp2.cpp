@@ -1,4 +1,3 @@
-
 #include <string>
 #include <iostream>
 #include <cstdlib>
@@ -132,7 +131,7 @@ void printGeneratedMatrix(){
                 //cout << *it << "amd" << temp << endl;
                 counter++;
             }
-            if(generatedMatrix.end()){break;}
+            if(index3 == (sizeof(generatedMatrix)/4)){break;}
             index0++;index1++;index2++;index3++;
             
             
