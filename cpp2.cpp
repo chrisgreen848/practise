@@ -75,12 +75,13 @@ public:
 						gen[2] = letterss[position3];
 						gen[3] = letterss[position4];
 						counter = 0; // resets counter to 0 for function checker
-						functionChecker();
+						
 						temp = temp + gen[0] + gen[1] + gen[2] + gen[3];
 						combi.push_back(temp);
 
 						newMatrixSize = sizeof(newMatrix);
 						newMatrixSize = newMatrixSize / 4;
+						functionChecker();
 						vectcounter++;
 
 
@@ -107,7 +108,7 @@ public:
 				counter++;
 			}
 		}
-		cout << gen[0] << gen[1] << gen[2]<<gen[2]<< " ," << counter << endl;
+		cout << gen[0] << gen[1] << gen[2]<<gen[3]<< " ," << counter << endl;
 	}
 
 	void functionChecker2() {
@@ -124,7 +125,7 @@ public:
 			for (std::vector<char>::iterator iit = generatedMatrix.begin(); iit != generatedMatrix.end(); ++iit)
 			{
 				string temp = "";
-				if (index3 == (size(generatedMatrix))) { break; }
+				if (index3 == generatedMatrix.size()) { break; }
 				temp = temp + generatedMatrix.at(index0) + generatedMatrix.at(index1) + generatedMatrix.at(index2) + generatedMatrix.at(index3);
 				//cout << "combi at blah is" << *it << "amd temp is" << temp << endl;
 				if (*it == temp) {
