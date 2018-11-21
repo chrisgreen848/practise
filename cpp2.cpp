@@ -155,7 +155,7 @@ public:
 				it++;
 				if (it == combi.end()) { temp = "AAAA"; return temp; } // if the last value of vectors entered. Starts again
 				temp = *it;
-				cout << "Next Combi is" << *it;
+				//cout << "Next Combi is" << *it; // can display it here or outside with return value.
 				break;
 			}
 		}
