@@ -197,12 +197,12 @@ int main() {
 	one.printGeneratedMatrix();
 	allCombinations = one.generateCombinations();
 	one.printAllCombinations();
-	one.functionChecker2();
-	//cout << "Enter the string you want for next combination checker" << endl;
-	//string combination = "";
-	//	cin >> combination;
-	//combination = one.nextCombination(combination);
-	//cout << "combination is" << combination;
+	//one.functionChecker2();
+	cout << "Enter the string you want for next combination checker" << endl;
+	string combination = "";
+		cin >> combination;
+	combination = one.nextCombination(combination);
+	cout << "combination is" << combination;
 	int end; // just so the cmd tool stays to show outputs - remove this from code before submitting
 	cin >> end;
 
