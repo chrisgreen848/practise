@@ -1,22 +1,3 @@
-/*#include "data.h"
-#include <string>
-int main() {
-	matrixManip one;  
-	cout << "Enter amount of letters you want to generate";
-	int number;
-	cin >> number;
-	one.generateMatrix(number);  // generates random matrix 
-	one.generateCombinations();
-	one.printAllCombinations();
-	one.functionChecker2();
-	cout << "Enter the string you want for next combination checker" << endl;
-	string combination = "";
-	cin >> combination;
-	one.nextCombination(combination);
-	int end; // just so the cmd tool stays to show outputs - remove this from code before submitting
-	cin >> end;
-	
-}*/
 #include <string>
 #include <iostream>
 #include <cstdlib>
