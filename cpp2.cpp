@@ -55,13 +55,13 @@ public:
 			count++;
 			randomNumber = rand() % 4;
 
-			if (randomNumber == 0) { generatedMatrix.push_back('G'); }
+			if (randomNumber == 0) { newMatrix[x] = 'G'; generatedMatrix.push_back('G'); } 
 
-			if (randomNumber == 1) { generatedMatrix.push_back('C'); }
+			if (randomNumber == 1) { newMatrix[x] = 'C'; generatedMatrix.push_back('C'); }
 
-			if (randomNumber == 2) { generatedMatrix.push_back('A'); }
+			if (randomNumber == 2) { newMatrix[x] = 'A'; generatedMatrix.push_back('A'); }
 
-			if (randomNumber == 3) { generatedMatrix.push_back('T'); }
+			if (randomNumber == 3) { newMatrix[x] = 'T'; generatedMatrix.push_back('T'); }
 		}
 		return generatedMatrix;
 	}
@@ -96,7 +96,7 @@ public:
 						gen[2] = letterss[position3];
 						gen[3] = letterss[position4];
 						counter = 0; // resets counter to 0 for function checker
-									 //functionChecker();
+						functionChecker();
 						temp = temp + gen[0] + gen[1] + gen[2] + gen[3];
 						combi.push_back(temp);
 
@@ -121,14 +121,14 @@ public:
 		}
 	}
 
-	void functionChecker() {  // internal check
+	void functionChecker() {  // internal check faster route
 		for (int randomMatrixChecker = 0; randomMatrixChecker < newMatrixSize; randomMatrixChecker++) {
 			if (newMatrix[randomMatrixChecker] == gen[0] && newMatrix[randomMatrixChecker + 1] == gen[1] && newMatrix[randomMatrixChecker + 2] == gen[2] && newMatrix[randomMatrixChecker + 3] == gen[3])
 			{
 				counter++;
 			}
 		}
-		cout << "," << counter << endl;
+		cout << gen[0] << gen[1] << gen[2]<<gen[2]<< " ," << counter << endl;
 	}
 
 	void functionChecker2() {
