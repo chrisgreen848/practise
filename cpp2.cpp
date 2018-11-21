@@ -10,26 +10,26 @@ using namespace std;
 
 class matrixManip {
 private: // Class variables that can only be accessed by THIS class
-	wchar_t newMatrix[200000] = {};
-	char letterss[4] = { 'G','C','A','T' };
-	char gen[4];
-	int newMatrixSize = 0;
-	int counter;
-	string temp;
-	vector<string> combi;
-	int vectcounter = 0;
+	wchar_t newMatrix[200000] = {}; // generated matrix of charas
+	char letters[4] = { 'G','C','A','T' };  //array of characters that can be used
+	char gen[4]; // temp storage for generated values
+	int newMatrixSize = 0; // size of generated matrix
+	int counter; // counter for number of repetitions
+	string temp; // temp string to hold generated matrix comparisons in vector
+	vector<string> combi; // combination vector 
+	int vectcounter = 0; // size of vector 
 	int iterator = 0;
-	vector<char> generatedMatrix;
+	vector<char> generatedMatrix; // generated matrix vector
 
 public:
 
 
 	vector<char> generateMatrix(int a) {
-		srand(time(NULL));
+		srand(time(NULL));// seed of random generated number
 		unsigned long int generateNumber;
-		generateNumber = a;
+		generateNumber = a; 
 		int randomNumber;
-		char letters[4] = { 'G','C','A','T' }; //Stores useable characters
+		//char letters[4] = { 'G','C','A','T' }; //Stores useable characters
 		int count = 0;
 
 		for (int x = 0; x < generateNumber; x++) {
@@ -44,8 +44,10 @@ public:
 
 			if (randomNumber == 3) { newMatrix[x] = 'T'; generatedMatrix.push_back('T'); }
 		}
-		return generatedMatrix;
+		return generatedMatrix; 
 	}
+	
+	
 	void printGeneratedMatrix() {
 		for (std::vector<char>::iterator it = generatedMatrix.begin(); it != generatedMatrix.end(); ++it)
 		{
@@ -72,10 +74,10 @@ public:
 					for (int position4 = 0; position4 < 4; position4++)
 					{
 						temp = {};
-						gen[0] = letterss[position1];
-						gen[1] = letterss[position2];
-						gen[2] = letterss[position3];
-						gen[3] = letterss[position4];
+						gen[0] = letters[position1];
+						gen[1] = letters[position2];
+						gen[2] = letters[position3];
+						gen[3] = letters[position4];
 						counter = 0; // resets counter to 0 for function checker
 						
 						temp = temp + gen[0] + gen[1] + gen[2] + gen[3];
@@ -167,11 +169,7 @@ public:
 };
 
 int main() {
-    ofstream outputFile;
-ofstream fs
-// create a name for the file output
-std::string filename = "exampleOutput.csv";
-
+   
 	matrixManip one;
 	cout << "Enter amount of letters you want to generate";
 	int number;
