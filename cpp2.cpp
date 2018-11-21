@@ -4,6 +4,8 @@
 #include <ctime>
 #include <vector>
 #include <string>
+#include <iostream>
+#include <fstream>
 using namespace std;
 
 class matrixManip {
@@ -165,6 +167,10 @@ public:
 };
 
 int main() {
+    ofstream outputFile;
+ofstream fs
+// create a name for the file output
+std::string filename = "exampleOutput.csv";
 
 	matrixManip one;
 	cout << "Enter amount of letters you want to generate";
@@ -176,7 +182,7 @@ int main() {
 	generatedMatrix = one.generateMatrix(number);
 	one.printGeneratedMatrix();
 	allCombinations = one.generateCombinations();
-	one.printAllCombinations();
+	//one.printAllCombinations();
 	//one.functionChecker2(); checks outside of function - functionchecker inside checks internally as the matrix is generated for speed.
 	cout << "Enter the string you want for next combination checker" << endl;
 	string combination = "";
