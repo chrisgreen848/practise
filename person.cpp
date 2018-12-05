@@ -56,3 +56,26 @@ int person::getWeight( void )
 }
 
 person::~person() {}  //destructor
+nt main()
+{
+   person name1;
+   person name2;
+   std::string personName = "";
+   int personWeight;
+   int personHeight;
+   std::cout << "Enter your name: "; 
+   std::cin >> personName;
+   name1.setName(personName);
+   personName = name1.getName();
+   std::cout << "Your name is : " << personName << std::endl;
+   std::cout << "Enter your height and weight : ";
+   std::cin >> personHeight >> personWeight;
+   name1.setWeight( personWeight );
+   name1.setHeight( personHeight );
+   personHeight = name1.getHeight();
+   personWeight = name1.getWeight();
+   std::cout << "\n" << "Your Height is : " << personHeight << "cm's" << " and your weight is : " << personWeight << "KG" << std::endl;
+
+   int end;
+   std::cin >> end;
+}
